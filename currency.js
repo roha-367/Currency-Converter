@@ -1,5 +1,5 @@
 const BASE_URL = "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies";
-// const BASE_URL = "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies";
+
 
 const dropdown=document.querySelectorAll(".dropdown select");
 const btn=document.querySelector("form button");
@@ -47,18 +47,16 @@ btn.addEventListener("click",async(evt)=>{
     amount.value="1";
    }
 
-//    const URL=`BASE_URL/${Fromcurr.value.toLowerCase()}/${Tocurr.value.toLowerCase()}.json`;
-//const URL = `${BASE_URL}/${Fromcurr.value.toLowerCase()}/${Tocurr.value.toLowerCase()}.json`;
+
 let fromCode = Fromcurr.value.toLowerCase();
     let toCode = Tocurr.value.toLowerCase();
     // const URL = `${BASE_URL}/${fromCode}.json`;
     const URL = `${BASE_URL}/${fromCode}.json`
     let response = await fetch(URL);
     let data = await response.json();
-//    let response=await fetch(URL);
-//    let data=await response.json();
+
    let rate = data[fromCode][toCode];
-//    let rate=data[Tocurr.value.toLowerCase()];
+
 
   console.log(rate);
 let finalAmount = amtval * rate;
@@ -68,15 +66,5 @@ let msg = document.querySelector(".msg");
     }
 });
 
-  // Screen par display karne ke liye
-    // let finalAmount = amtval * rate;
-    // msg.innerText = `${amtval} ${Fromcurr.value} = ${finalAmount} ${Tocurr.value}`;
-// });
-// let msg = document.querySelector(".msg");
-// if (msg) {
-        // msg.innerText = `${amtval} ${Fromcurr.value} = ${amtval * rate} ${Tocurr.value}`;
-    // }
-// });
-// }
 
-// );
+    
