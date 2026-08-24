@@ -8,7 +8,7 @@ A sleek, responsive, and lightweight web application built with **HTML5**, **CSS
 
 ## 🔗 Live Demo
 
-👉 **[Experience the Live App](https://roha-367.github.io/currency-converter/)**
+👉 **[Experience the Live App]https://roha-367.github.io/Currency-Converter/**
 
 ---
 
